@@ -1,0 +1,86 @@
+.container{
+    padding: 30px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.container .title-and-id{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+}
+.container .title-and-id h1{
+font-size: 3em;
+font-weight: 500;
+text-transform: uppercase;
+}
+.container .title-and-id span{
+    font-size: 4em;
+font-weight: 600;
+color: #333;
+text-transform: uppercase;
+}
+
+.container .imgBox {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container .imgBox .peso-talla{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .imgBox .peso-talla h3{
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.container .stats{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    padding:10px;
+}
+.container .stats p{
+    text-transform: uppercase;
+    font-weight: 400 bold;
+    font-size: 1em;
+
+}
+
+.container .stats p span{
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+@media (max-width: 900px){
+    .container .title-and-id h1{
+        font-size: 1em;
+       
+        }
+        .container .title-and-id span{
+            font-size: 1.5em;
+        }
+        .container .imgBox{
+            flex-direction: column;
+        }
+        .container .stats{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+       
+}

@@ -1,0 +1,19 @@
+.container{
+  padding: 20px 0;
+}
+.container .grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 18px;
+ justify-items: center;
+ align-items: center;
+}
+
+@media (max-width:600px){
+  .container{
+    padding: 10px 0;
+  }
+  .container .grid{
+    grid-template-columns: 100%;
+  }
+}

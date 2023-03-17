@@ -1,0 +1,55 @@
+.container {
+  width: 200px;
+  height: 300px;
+  background: radial-gradient(circle at 100%, #807c7c, #807c7c 50%, #eee 75%, #ccc 75%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0.5);
+  border-radius: 30px;
+  overflow: hidden;
+  
+}
+.imgBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(to Top, coral, white);
+}
+.contentCard {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(146, 18, 18);
+  text-transform: uppercase;
+  padding-top: 5px;
+}
+.btn {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+button {
+  background: linear-gradient(to Left, lightcoral, white);
+  padding: 10px 15px;
+  border-radius: 50%;
+  border: none;
+  color: #333;
+  font-weight: bold;
+  transition: 0.5s;
+}
+button:hover {
+  transform: scale(1.2);
+}

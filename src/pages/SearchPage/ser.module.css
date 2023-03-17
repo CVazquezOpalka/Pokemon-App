@@ -1,0 +1,22 @@
+.tile {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.mediaQuery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px 0;
+  justify-items: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .title {
+    text-align: center;
+  }
+
+  .mediaQuery {
+    grid-template-columns: 100%;
+  }
+}

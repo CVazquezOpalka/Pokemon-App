@@ -39,3 +39,23 @@ export function ContextGrid() {
     </main>
   );
 }
+
+/* {loading ? (
+        <Loading />
+      ) : (
+        <div className={styles.container}>
+          <Pagination
+            onPrev={onPrevPage}
+            onNext={onNextPage}
+            totalPage={total}
+            Page={page + 1}
+          />
+          <div className={styles.grid}>
+            {allPokemons
+              ?.sort((a, b) => a.id - b.id)
+              .map((e) => (
+                <PokeCard key={e.id} pokemon={e} />
+              ))}
+          </div>
+        </div>
+      )} */

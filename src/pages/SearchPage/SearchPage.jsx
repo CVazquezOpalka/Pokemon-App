@@ -1,41 +1,36 @@
 import React, { useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { PokemonContext } from "../../context/PokemonContext";
-import { PokeCard } from "../../components/pokeCard/pokeCard";
-import styles from './ser.module.css'
+import { SearchCard } from "../../components/CardSearch/SearchCard";
+import styles from "./ser.module.css";
 
 const SearchPage = () => {
   const location = useLocation();
-  console.log(location);
 
   const { globalState } = useContext(PokemonContext);
 
   const filteredPokemons = globalState.filter((pokemon) =>
-    pokemon.name.toLowerCase().includes(location.state)
+    pokemon.name.includes(location.state.toLowerCase())
   );
 
   return (
     <div>
-      <h3
-        
-        className={styles.title}
-      >
+      <h3 className={styles.title}>
         Se encontraron{" "}
         <span
           style={{
             fontWeight: "700 bold",
             fontSize: "1.5em",
+            textAlign: "center",
           }}
         >
           {filteredPokemons.length}
         </span>{" "}
         resultados
       </h3>
-      <div
-         className={styles.mediaQuery}
-      >
+      <div className={styles.mediaQuery}>
         {filteredPokemons.map((e) => (
-          <PokeCard key={e.id} pokemon={e} />
+          <SearchCard key={e.id} pokemon={e} />
         ))}
       </div>
     </div>

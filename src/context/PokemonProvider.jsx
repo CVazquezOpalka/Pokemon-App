@@ -28,7 +28,7 @@ export const PokemonProvider = ({ children }) => {
     setLoading(false);
   };
   const getGlobalPokemons = async () => {
-    const URL = " https://pokeapi.co/api/v2/pokemon?limit=1500&offset=0";
+    const URL = " https://pokeapi.co/api/v2/pokemon?limit=120&offset=0";
     const res = await fetch(URL);
     const data = await res.json();
     const promesi = data.results.map(async (pokemon) => {
@@ -54,11 +54,6 @@ export const PokemonProvider = ({ children }) => {
     const onPage = Math.max(page - 1, 0);
     setPage(onPage);
   };
-  //function para guardar las cosas en el local storage
-
-  // este useEffect voy a usar para el local storage;
-  useEffect(() => {}, []);
-
   useEffect(() => {
     getAllPokemon();
   }, [page]);

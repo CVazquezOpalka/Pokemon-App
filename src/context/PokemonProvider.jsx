@@ -28,7 +28,7 @@ export const PokemonProvider = ({ children }) => {
     setLoading(false);
   };
   const getGlobalPokemons = async () => {
-    const URL = " https://pokeapi.co/api/v2/pokemon?limit=120&offset=0";
+    const URL = " https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0";
     const res = await fetch(URL);
     const data = await res.json();
     const promesi = data.results.map(async (pokemon) => {
